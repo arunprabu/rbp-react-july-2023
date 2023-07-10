@@ -39,7 +39,7 @@ const Blog = () => {
   console.log("Program Ended");
 
   if (isLoading) {
-    return <div class="spinner-border text-success" role="status"></div>;
+    return <div className="spinner-border text-success" role="status"></div>;
   }
 
   if (isError) {
