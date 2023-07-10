@@ -38,27 +38,24 @@ const Blog = () => {
   }, []);
 
   console.log("Program Ended");
+
+  if (isLoading) {
+    return <div class="spinner-border text-success" role="status"></div>;
+  }
+
+  if (isError) {
+    return(
+      <div className="alert alert-danger">
+        Some Error Occured! Try agin later;
+      </div>
+    )
+  }
+
   return (
     <div>
       <h3>My Blog App</h3>
 
       <div className="row mb-2">
-        {
-          isError? 
-          <div className="alert alert-danger">
-            Some Error Occured! Try agin later;
-          </div>
-          :
-          ""
-        }
-
-
-        {isLoading ? (
-          <div class="spinner-border text-success" role="status"></div>
-        ) : (
-          ""
-        )}
-
         {
           // lists and keys
           postList.map((post) => {
