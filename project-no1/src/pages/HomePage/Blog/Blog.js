@@ -52,9 +52,7 @@ const Blog = () => {
 
   return (
     <div>
-      if(true ){
-
-      }
+      
       <h3>My Blog App</h3>
 
       <div className="row mb-2">
