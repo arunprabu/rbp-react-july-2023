@@ -24,7 +24,6 @@ const Blog = () => {
         setPostList(res.data);
         setIsLoding(false);
         setIsError(false);
-
         // you can check here for 404
       })
       .catch((err) => {
@@ -53,13 +52,24 @@ const Blog = () => {
 
   return (
     <div>
+      if(true ){
+
+      }
       <h3>My Blog App</h3>
 
       <div className="row mb-2">
         {
+          postList && postList.length === 0 ? 
+            <div className="alert alert-danger">
+              No Posts Found!
+            </div>
+          :
+          ""
+        }
+
+        {
           // lists and keys
-          postList.map((post) => {
-            console.log(post);
+          postList.map((post, index) => {
             return (
               <div className="col-md-6" key={post.id}>
                 <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
