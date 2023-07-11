@@ -57,12 +57,10 @@ const Blog = () => {
 
       <div className="row mb-2">
         {
-          postList && postList.length === 0 ? 
+          (postList && postList.length === 0) &&
             <div className="alert alert-danger">
               No Posts Found!
             </div>
-          :
-          ""
         }
 
         {
