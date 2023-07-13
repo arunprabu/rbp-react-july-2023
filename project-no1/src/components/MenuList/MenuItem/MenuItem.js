@@ -1,7 +1,9 @@
-const MenuItem = ({title, url}) => { // receive props selectively using obj destructuring
+import PropTypes from 'prop-types';
+
+const MenuItem = ({ title, url }) => { // receive props selectively using obj destructuring
   // console.log(props);
-  /** 
-    * props are objects 
+  /**
+    * props are objects
     * props are read-only
     * props can also have children
   */
@@ -14,5 +16,10 @@ const MenuItem = ({title, url}) => { // receive props selectively using obj dest
     </li>
   );
 }
+
+MenuItem.propTypes = {
+  title: PropTypes.string,
+  url: PropTypes.string
+};
 
 export default MenuItem

@@ -1,7 +1,7 @@
-import MenuList from "../MenuList/MenuList"
+import MenuList from '../MenuList/MenuList'
 
 const Footer = () => {
-  let copyrightYear = 2023;
+  const copyrightYear = 2023;
   const devName = 'Arun';
 
   return (
@@ -15,4 +15,4 @@ const Footer = () => {
   );
 }
 
-export default Footer
+export default Footer;

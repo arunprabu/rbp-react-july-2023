@@ -1,0 +1,116 @@
+Browser
+--
+    1. HTML Renderer 
+    2. CSS Parser 
+    3. JS Engine 
+
+
+Debugging
+----
+  1. Compilation Error 
+      * during the development
+
+  2. Runtime Error
+      * will explain error boundary later
+
+Performance Tuning in React App
+----
+    1. Send and Receive only necessary props
+    2. Never have inline styles in lists and keys
+    3. Keep JSX tags minimal 
+    4. Use Fragment whereever needed
+
+CSS Framework 
+---
+    Choices 
+    ---
+        * bootstrap or react-bootstrap or reactstrap 
+        * @mui/material  (material ui)
+        * antd
+        * polaris or corbon or fluent2 design systems
+
+=====
+
+
+Software design principle
+---
+    * DRY / WET 
+    * KISS 
+
+To learn:
+Naming Conventions & Casing Conventions 
+----
+Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in Java & TypeScript 
+        * all react components should be named in PascalCase
+        * all components folder should be of this type 
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html or JSX elements 
+
+        examples 
+        -----
+          var myCar = 'BMW';
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names (if not react), assets in front end projects 
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect says okay
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+
+Clean Code
+----
+
+Explain Linting 
+---
+
+Static Type Checking 
+---
+  1. TypeScript 
+  2. Prop-Types 
+  3. Flow JS 
+
+Webpack
+
+
+Unit testing 
+StoryBook 
+
+State Management with Redux 
+SSR 
+CI/CD Pipeline 
+
+

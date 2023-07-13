@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
 const MyAccount = () => {
   // state = component wide updatable data
-  const [accountName, setAccountName] = useState("arun"); // arun is initial state data
+  const [accountName, setAccountName] = useState('arun'); // arun is initial state data
   const [phoneNumber, setPhoneNumber] = useState('');
   const phoneNumberRef = useRef('');
 
@@ -20,7 +20,7 @@ const MyAccount = () => {
         className="btn btn-primary"
         onClick={() => {
           setAccountName((prevState) => {
-            return "john";
+            return 'john';
           });
         }}
       >
@@ -28,7 +28,7 @@ const MyAccount = () => {
       </button>
 
       <hr />
-      {/* Uncontrolled component -- where form data is handled by the DOM itself.*/}
+      {/* Uncontrolled component -- where form data is handled by the DOM itself. */}
       <input type="text" placeholder="Enter your Phone" ref={phoneNumberRef} />
       <button type="button" onClick={handleSavePhoneNumber}>
         Save Phone Number

@@ -1,6 +1,6 @@
-import { useEffect, useReducer, useRef } from "react";
-import todosReducer from "../../../reducers/todosReducer";
-import axios from "axios";
+import { useEffect, useReducer, useRef } from 'react';
+import todosReducer from '../../../reducers/todosReducer';
+import axios from 'axios';
 
 const Todos = () => {
   const todoInput = useRef();
@@ -12,11 +12,11 @@ const Todos = () => {
     // send rest api calls to the backend.
     // upon successful data fetching... dispatch with the action type and payload
     axios
-      .get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+      .get('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then((res) => {
         console.log(res.data);
         todoDispatch({
-          type: "LIST_TODOS",
+          type: 'LIST_TODOS',
           payload: res.data
         });
       })
@@ -31,11 +31,11 @@ const Todos = () => {
     // action obj must have type property.
     // action obj can have payload property.
     todoDispatch({
-      type: "ADD_TODO",
+      type: 'ADD_TODO',
       payload: {
         id: Math.floor(Math.random() * 10000),
         title: todoInput.current.value,
-        completed: false,
+        completed: false
       }
     });
 

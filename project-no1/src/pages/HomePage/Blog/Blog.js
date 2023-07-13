@@ -1,8 +1,8 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const Blog = () => {
-  console.log("Program Started");
+  console.log('Program Started');
   const [isLoading, setIsLoding] = useState(true);
   const [isError, setIsError] = useState(false);
   const [postList, setPostList] = useState([]);
@@ -16,7 +16,7 @@ const Blog = () => {
     // 1.2 What's the HTTP Method? GET
     // 1.3 What's the Http Client Tool / REST API Client Tool? axios ---- npm i axios
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_limit=10")
+      .get('https://jsonplaceholder.typicode.com/posts?_limit=10')
       .then((res) => {
         // for successful response
         console.log(res.data);
@@ -32,18 +32,18 @@ const Blog = () => {
         setIsLoding(false);
       })
       .finally(() => {
-        console.log("It is over!");
+        console.log('It is over!');
       });
   }, []);
 
-  console.log("Program Ended");
+  console.log('Program Ended');
 
   if (isLoading) {
     return <div className="spinner-border text-success" role="status"></div>;
   }
 
   if (isError) {
-    return(
+    return (
       <div className="alert alert-danger">
         Some Error Occured! Try agin later;
       </div>
@@ -52,7 +52,7 @@ const Blog = () => {
 
   return (
     <div>
-      
+
       <h3>My Blog App</h3>
 
       <div className="row mb-2">
