@@ -104,7 +104,8 @@ Static Type Checking
   3. Flow JS 
 
 Webpack
-
+Debugging 
+performance tips 
 
 Unit testing 
 StoryBook 
@@ -114,3 +115,134 @@ SSR
 CI/CD Pipeline 
 
 
+=====
+ReactJS - Performace Tips
+--
+1. Use NPM package or any third party libraries only if absolutely needed.
+2. Most performance issues come in lists. So, think about having pagination.
+  Try this awesome package
+  https://bvaughn.github.io/react-virtualized/
+3. Make use of props wisely. Don't leave out unused props. 
+  
+  So, a bad way could be...
+  const MyComp = (props) => { //bad way if all props are not used
+
+  }
+
+  but a better way to have props is here.. using object destructuring.
+  cont MyComp = ({ title, body, postId}){ // ignoring userId, if I don't display it anywhere
+
+  }
+  Also,don't pass unneccessary props. 
+  And wise idea is not to store userId in the redux store.
+
+4. Lazy Load Images 
+  https://www.npmjs.com/package/react-lazy-load-image-component
+5. Use profiler to record the app pages. And then check and fix the app. 
+6. Use Redux Dev Tools to check how long it take for the actions.
+7. Think about optimizing back end also. 
+8. Avoid having unnecessary tags, css. go with Fragment, <></>, 
+9. Don't bloat the page with too many components, 
+  because will have lifecycle hooks and will have re-rendering cycles.
+  If one parent comp updates, that will update child comp's till the last level.
+  Solution could be to use Pure Components 
+10. Don't have more class components. Use functional components. 
+  Use hooks to stop child comp re-rendering. Remember useEffect, useCallback!
+11. Don't write too many inline styles. You should definitely avoid it inside loops.
+12. Don't write inline callbacks in loops. 
+    // bad 
+    <button onClick={() => deleteRecord()} >Delete</button> 
+    // good 
+    const deleteRecord = () =>{
+
+    }
+    <button onClick={deleteRecord} >Delete</button> 
+
+13. Use Why did you update tool
+    https://www.npmjs.com/package/@welldone-software/why-did-you-render
+14. shouldComponentUpdate lifecycle hook
+15. Avoid prop drilling
+16. Learn more performance tips.. There are aplenty.
+
+Refer: Learn about anti-patterns in react
+===
+Debugging in Production
+---
+https://medium.com/@baphemot/intro-to-debugging-reactjs-applications-67cf7a50b3dd
+
+
+Project: calc
+--------------
+  Sources: FRD, Designs, HLD, LLD
+
+  Development 
+  --- 
+    Feature: add 
+
+    Test cases  / test specs / tests 
+    ---
+      1. inputs should be numbers 
+      2. output should be number 
+      3. if wrong in inputs entered add button should be disabled 
+
+    code:
+    --- 
+      function add(a, b){
+        if(typeof a === number & typeof b === number){
+          return a + b;
+        } 
+      }
+
+      add(10, 20); // 30
+
+    [Tools are doing the TESTING]
+
+
+Modern s/w dev approach
+---
+  Dev writing test cases => Dev writing functionality => (Tools) => (SUCCESS / FAILURE)
+
+
+Automated Testing 
+---
+  * Writing code to test our project code 
+
+  0. Static Type Checking
+      Tools: TypeScript, FlowJS or Prop-Types
+
+  1. Unit Testing [TO LEARN]
+      * Testing tiny, independent block of code in a comp 
+      * Testing the comp isolation. (w/o connecting to the REST API)
+      * Bug reduction density: 40-80%
+      Tools: JEST, React Testing Library 
+
+      JEST - is an unit testing framework and also a test runner 
+      React Testing Library(RTL) - DOM querying utility
+
+  2. Integration Testing 
+      Tools: JEST, React Testing Library or EnzymeJS
+
+  3. End to End Testing
+      Tools: Selenium, Playwright, CypressJS, Protractor
+
+=====
+
+Modern Software Development Approaches 
+  1. Test-Driven Development (TDD) [TO LEARN]
+      * writing fn code only if test fails 
+
+      Dev writing test cases => (FAILS) => Dev writing fn code => (SUCCESS) => [CODE COMPLETE]
+
+      Test Pattern: AAA (Arrange, Act, Assert)
+      Tools: JEST, React Testing Library
+
+  2. Behaviour-Driven Development (BDD)
+      * writing fn code only if test fails 
+      * Developing the app based on the behaviour the end user wants to experience in the app. 
+
+      Dev writing test cases => (FAILS) => Dev writing fn code => (SUCCESS) => [CODE COMPLETE]
+
+      Test Pattern: Given/When/Then 
+      Tools: JasmineJS, Karma 
+
+=====

@@ -1,0 +1,14 @@
+Storybook Tutorial
+---
+Create a new react project
+
+
+setup storybook
+---
+  npx storybook@latest init
+  
+  then,
+
+  npm run storybook
+
+  
