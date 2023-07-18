@@ -14,7 +14,7 @@ const Todos = () => {
     axios
       .get('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then((res) => {
-        console.log(res.data);
+        // console.log(res?.data);
         todoDispatch({
           type: 'LIST_TODOS',
           payload: res.data
