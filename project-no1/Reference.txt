@@ -309,3 +309,13 @@ function ProductSidebarFactory({ productType, ...props }) {
       throw new Error(`Invalid product type: ${productType}`);
   }
 }
+
+  1. Story Book
+  2. factory model.
+  3. Explain the essentials of PWA / web components / Hybrid - Quick Intro
+  4. state management  & Redux 
+  5. SSR - Quick Intro 
+  6. CI / CD pipelines 
+  7. Estimation 
+
+

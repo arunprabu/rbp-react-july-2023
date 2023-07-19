@@ -1,0 +1,11 @@
+
+Setup Storybook in a CRA App
+  npx storybook@latest init
+
+To Run storybook 
+  npx run storybook 
+
+What are Stories?
+  Storybook stories represent the key states of each of your components.
+
+
