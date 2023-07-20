@@ -310,12 +310,25 @@ function ProductSidebarFactory({ productType, ...props }) {
   }
 }
 
-  1. Story Book
-  2. factory model.
-  3. Explain the essentials of PWA / web components / Hybrid - Quick Intro
-  4. state management  & Redux 
+<ProductSidebarFactory productType="clothing" />
+
+  1. Story Book [DONE]
+  2. factory model. [DONE]
+  3. Explain the essentials of PWA / web components / Hybrid - Quick Intro [DONE]
+  4. state management & Redux 
   5. SSR - Quick Intro 
   6. CI / CD pipelines 
   7. Estimation 
 
 
+PWA 
+---
+  mobile apps installable
+  webapps are accessible over browser (mobile and desktop)
+
+  installable webapps in both computer and mobile?
+    PWA 
+
+====
+
+  
