@@ -316,7 +316,7 @@ function ProductSidebarFactory({ productType, ...props }) {
   2. factory model. [DONE]
   3. Explain the essentials of PWA / web components / Hybrid - Quick Intro [DONE]
   4. state management & Redux 
-  5. SSR - Quick Intro 
+  5. SSR - Quick Intro [DONE]
   6. CI / CD pipelines 
   7. Estimation 
 
@@ -330,5 +330,42 @@ PWA
     PWA 
 
 ====
+
+
+Cross comp commn-
+  1. p to c 
+  2. c to p 
+  3. any to any comp commn 
+      1. using React Context API (useContext)
+      2. using Redux / zustand/ MobX / Flux / Recoil / jotai / 
+
+
+State Management in Redux 
+----
+  1. React JS + React-Redux + Redux JS (classic redux from 2016) 
+      * very complex 
+      * steps (36-45)
+      * additional tools
+        1. redux-thunk / redux-saga 
+        2. redux dev tools 
+        3. immerjs 
+
+  2. React + Redux-Toolkit (modern redux from 2020)
+      * easier 
+      * steps (4-8)
+      * additional tools are already integrated 
+
+======
+How to create JS based Redux toolkit  project?
+  npx create-react-app my-app --template redux
+
+How to create TS based Redux toolkit  project?
+  npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+
+  
+
+
+
+
 
   
