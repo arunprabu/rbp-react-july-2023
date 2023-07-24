@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/shared/Header/Header';
 import Users from './features/users/Users';
+import Products from './features/products/Products';
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Counter />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </main>
     </BrowserRouter>
